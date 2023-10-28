@@ -10,16 +10,16 @@ INSERT INTO Produtos (Nome, Quantidade, PrecoVenda) VALUES
 DECLARE @ProximoID INT;
 SET @ProximoID = NEXT VALUE FOR PessoaIDSequence;
 
-INSERT INTO Pessoas (ID, Nome, Endereco, Telefone) VALUES
-(@ProximoID, 'Jo„o Silva', 'Rua ABC, 123', '111-222-3333');
+INSERT INTO Pessoas (ID, Nome, Logradouro, Cidade, Estado, Telefone, Email) VALUES
+(@ProximoID, 'Jo√£o Silva', 'Rua ABC, 123','Itu','SP', '111-222-3333', 'Joao123@gmail.com');
 
 INSERT INTO PessoaFisica (PessoaID, CPF) VALUES
 (@ProximoID, '123.456.789-00');
 
 SET @ProximoID = NEXT VALUE FOR PessoaIDSequence;
 
-INSERT INTO Pessoas (ID, Nome, Endereco, Telefone) VALUES
-(@ProximoID, 'Empresa XYZ', 'Av. 123, Bloco A', '444-555-6666');
+INSERT INTO Pessoas (ID, Nome, Logradouro, Cidade, Estado, Telefone, Email) VALUES
+(@ProximoID, 'Empresa XYZ  ', 'Av. 123, Bloco A', 'Itu', 'SP', '444-333-6666', 'Pedro321@gmail.com');
 
 INSERT INTO PessoaJuridica (PessoaID, CNPJ) VALUES
 (@ProximoID, '12.345.678/0001-00');
