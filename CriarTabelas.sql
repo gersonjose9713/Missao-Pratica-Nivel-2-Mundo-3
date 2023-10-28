@@ -7,8 +7,11 @@ CREATE TABLE Usuarios (
 CREATE TABLE Pessoas (
     ID INT PRIMARY KEY IDENTITY(1,1),
     Nome NVARCHAR(255),
-    Endereco NVARCHAR(255),
-    Telefone NVARCHAR(20)
+	Logradouro NVARCHAR(255),
+	Cidade NVARCHAR(255),
+	Estado NVARCHAR(255),
+    Telefone NVARCHAR(20),
+	Email NVARCHAR(255),
 );
 
 CREATE TABLE PessoaFisica (
